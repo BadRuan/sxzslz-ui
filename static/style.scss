@@ -1,0 +1,218 @@
+$box-width: 1000px;
+$primary-color: #c7000b;
+$header-height: 60px;
+
+$news-list-item-height: 48px;
+$news-list-title-height: 48px;
+$news-list-line-height: 2px;
+$news-list-font-size: 1.2em;
+
+header {
+  height: $header-height;
+  background-color: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+
+  .heder-container {
+    width: $box-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 60px;
+
+    .logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      a {
+        font-size: 1.2em;
+        color: #000;
+
+        span {
+          display: inline-block;
+          height: $header-height;
+        }
+
+        div {
+          width: 100%;
+          height: 2px;
+        }
+
+        &:hover {
+          color: $primary-color;
+
+          div {
+            background-color: $primary-color;
+          }
+        }
+      }
+
+      .active {
+        color: $primary-color;
+
+        div {
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+main {
+  width: $box-width;
+  margin: auto;
+
+  .news-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .catelog {
+      width: 280px;
+      height: 800px;
+
+      .title {
+        height: $news-list-item-height;
+        line-height: $news-list-item-height;
+        font-size: $news-list-font-size;
+        background-color: $primary-color;
+        color: #fff;
+        text-align: center;
+      }
+
+      .item {
+        height: $news-list-item-height;
+        line-height: $news-list-item-height;
+        text-align: center;
+        font-size: $news-list-font-size;
+        border-left: 2px solid #fff;
+
+        a {
+          color: #000;
+        }
+
+        &:hover {
+          background-color: #e5e5e5;
+          border-left: 2px solid $primary-color;
+        }
+      }
+
+      .active {
+        background-color: #e5e5e5;
+        border-left: 2px solid $primary-color;
+      }
+    }
+
+    .wrap2 {
+      width: 720px;
+
+      .title {
+        .text {
+          width: 140px;
+          text-align: center;
+          margin-left: 40px;
+          height: $news-list-title-height - $news-list-line-height;
+          line-height: $news-list-title-height;
+          font-size: 1.5em;
+        }
+
+        .line {
+          margin: 0;
+          width: 100%;
+          height: $news-list-line-height;
+          background-color: #a6a6a6;
+
+          .bottom {
+            width: 140px;
+            margin-left: 40px;
+            height: $news-list-line-height;
+            background-color: $primary-color;
+          }
+        }
+      }
+
+      ul {
+        padding: 0;
+
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: 20px 0;
+
+          .news-title {
+            width: 580px;
+            font-size: 1.2em;
+            cursor: pointer;
+            a {
+              color: #000;
+
+              &:hover {
+                color: $primary-color;
+              }
+            }
+          }
+
+          .news-date {
+            width: 100px;
+            text-align: right;
+            color: #808080;
+          }
+        }
+      }
+    }
+  }
+
+  .news-detail {
+    .location {
+      margin: 20px 0;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .desc {
+      color: #383838;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 4px;
+      border-bottom: 0.5px solid #a6a6a6;
+    }
+  }
+
+  .editor—wrapper {
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    z-index: 100; /* 按需定义 */
+  }
+
+  .toolbar-container {
+    border-bottom: 1px solid #ccc;
+  }
+  .editor-container {
+    height: 900px;
+  }
+}
+
+footer {
+  background-color: #8d8d8d;
+
+  div {
+    font-size: 1em;
+    width: $box-width;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    color: #fff;
+
+    text-align: center;
+  }
+}
