@@ -1,5 +1,15 @@
 $box-width: 1000px;
 $primary-color: #c7000b;
+$gray-1: #f7f8fa;
+$gray-2: #f2f3f5;
+$gray-3: #e5e6eb;
+$gray-4: #c9cdd4;
+$gray-5: #a9aeb8;
+$gray-6: #86909c;
+$gray-7: #6b7785;
+$gray-8: #4e5969;
+$gray-9: #272e3b;
+$gray-10: #1d2129;
 $header-height: 60px;
 
 $news-list-item-height: 48px;
@@ -268,6 +278,53 @@ main {
   }
   .editor-container {
     height: 900px;
+  }
+
+  .station_name {
+    text-align: center;
+    font-size: 1.8em;
+    color: $primary-color;
+  }
+  .station {
+    .basic {
+      .chp_title {
+        margin: 12px 0;
+        border-left: 4px solid $primary-color;
+        padding-left: 4px;
+
+        .eng_txt {
+          color: $gray-7;
+          font-size: 0.8em;
+        }
+
+        .chi_txt {
+          font-size: 1.4em;
+          font-weight: bold;
+        }
+      }
+
+      .station_con {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-around;
+        .section {
+          margin: 20px 0;
+          .sec_item {
+            margin: 16px 0;
+            font-size: 1.2em;
+
+            .s1 {
+              color: $gray-9;
+            }
+
+            .s2 {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
