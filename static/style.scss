@@ -171,7 +171,8 @@ main {
         padding: 0 60px;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 12px;
 
         .pagination-item {
           display: block;
@@ -213,6 +214,46 @@ main {
       justify-content: space-between;
       padding-bottom: 4px;
       border-bottom: 0.5px solid #a6a6a6;
+    }
+  }
+
+  .edit_title {
+    text-align: center;
+  }
+
+  .editor {
+    label {
+      font-size: 1.2em;
+    }
+
+    .article_title {
+      border: 1px solid #aaa;
+      margin: 8px 0;
+      padding: 12px 12px;
+      border-radius: 4px;
+      width: $box-width - 20px;
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        height: 1.6em;
+      }
+    }
+    .button-container {
+      text-align: center;
+
+      input[type="submit"] {
+        margin: auto;
+        background-color: $primary-color;
+        color: white;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
     }
   }
 
