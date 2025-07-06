@@ -326,6 +326,193 @@ main {
       }
     }
   }
+
+  .home_page {
+    .section_1 {
+      display: flex;
+      flex-direction: row;
+      .news_area {
+        width: 600px;
+        height: auto;
+
+        .chp_title {
+          margin: 12px 0;
+          border-left: 4px solid $primary-color;
+          padding-left: 4px;
+
+          .eng_txt {
+            color: $gray-7;
+            font-size: 0.8em;
+          }
+
+          .chi_txt {
+            font-size: 1.4em;
+            font-weight: bold;
+          }
+        }
+
+        .news_list {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          padding: 0 4px;
+
+          .item {
+            border-bottom: 1px solid $gray-3;
+            .title {
+              color: #000;
+              padding-right: 16px;
+
+              a {
+                text-decoration: none;
+                color: #000;
+
+                &:hover {
+                  color: $primary-color;
+                }
+              }
+            }
+            .date {
+              padding-right: 12px;
+              text-align: right;
+              color: $gray-7;
+              margin-bottom: 4px;
+            }
+          }
+        }
+      }
+
+      .notice_area {
+        .chp_title {
+          margin: 12px 0;
+          border-left: 4px solid $primary-color;
+          padding-left: 4px;
+
+          .eng_txt {
+            color: $gray-7;
+            font-size: 0.8em;
+          }
+
+          .chi_txt {
+            font-size: 1.4em;
+            font-weight: bold;
+          }
+        }
+
+        .list {
+          width: 380px;
+          padding: 0 4px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          .item {
+            border-bottom: 1px solid $gray-3;
+            .title {
+              a {
+                text-decoration: none;
+                color: #000;
+
+                &:hover {
+                  color: $primary-color;
+                }
+              }
+            }
+
+            .date {
+              text-align: right;
+              color: $gray-7;
+            }
+          }
+        }
+      }
+    }
+    .section_2 {
+      display: flex;
+      flex-direction: row;
+      .station_area {
+        width: 600px;
+        height: auto;
+        .chp_title {
+          margin: 12px 0;
+          border-left: 4px solid $primary-color;
+          padding-left: 4px;
+
+          .eng_txt {
+            color: $gray-7;
+            font-size: 0.8em;
+          }
+
+          .chi_txt {
+            font-size: 1.4em;
+            font-weight: bold;
+          }
+        }
+        .station_list {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(4, 1fr);
+          justify-items: center;
+          align-items: center;
+
+          a {
+            text-decoration: none;
+            color: #000;
+            height: 40px;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+      .file_area {
+        width: 400px;
+        height: auto;
+        .chp_title {
+          margin: 12px 0;
+          border-left: 4px solid $primary-color;
+          padding-left: 4px;
+
+          .eng_txt {
+            color: $gray-7;
+            font-size: 0.8em;
+          }
+
+          .chi_txt {
+            font-size: 1.4em;
+            font-weight: bold;
+          }
+        }
+        .list {
+          width: 380px;
+          padding: 0 4px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          .item {
+            border-bottom: 1px solid $gray-3;
+            .title {
+              a {
+                text-decoration: none;
+                color: #000;
+
+                &:hover {
+                  color: $primary-color;
+                }
+              }
+            }
+
+            .date {
+              text-align: right;
+              color: $gray-7;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {

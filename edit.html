@@ -33,25 +33,88 @@
       </div>
     </header>
     <main>
-      <form id="post-form">
-        <input type="text" name="title" placeholder="文章标题" required />
-        <input type="hidden" id="hidden-content" name="content" />
-        <!-- 存储编辑器内容 -->
-        <button type="submit">发布文章</button>
+      <h2 class="edit_title">文章发布</h2>
+      <form class="editor" action="/news/edit/" method="post">
+        <input
+          id="csrf_token"
+          name="csrf_token"
+          type="hidden"
+          value="ImVkZGUzY2NjYWRjZDI2NmMxZmU1NDFjNWU3NmEwMmViNWU5NWE1OGEi.aGnsww.J2zrx_y4sLMemDmkhwCNHx6yhj4"
+        />
+        <label for="title">文章标题: </label> <br />
+        <input
+          id="title"
+          class="article_title"
+          maxlength="20"
+          minlength="4"
+          name="title"
+          required
+          size="20"
+          type="text"
+          value=""
+        /><br />
+        <label for="subset_id">文章类别: </label> <br />
+        <ul id="subset_id">
+          <li>
+            <input
+              id="subset_id-0"
+              name="subset_id"
+              required
+              type="radio"
+              value="1"
+            />
+            <label for="subset_id-0">泵站新闻</label>
+          </li>
+          <li>
+            <input
+              id="subset_id-1"
+              name="subset_id"
+              required
+              type="radio"
+              value="2"
+            />
+            <label for="subset_id-1">通知公告</label>
+          </li>
+          <li>
+            <input
+              id="subset_id-2"
+              name="subset_id"
+              required
+              type="radio"
+              value="3"
+            />
+            <label for="subset_id-2">文件公示</label>
+          </li>
+          <li>
+            <input
+              id="subset_id-3"
+              name="subset_id"
+              required
+              type="radio"
+              value="4"
+            />
+            <label for="subset_id-3">招投标采购</label>
+          </li>
+        </ul>
+        <input id="content" name="content" type="hidden" value="" />
+        <label for="title">文章正文: </label> <br />
+        <div class="editor—wrapper">
+          <div class="toolbar-container"><!-- 工具栏 --></div>
+          <div class="editor-container"><!-- 编辑器 --></div>
+        </div>
+        <div class="button-container">
+          <input id="submit" name="submit" type="submit" value="立即发布" />
+        </div>
       </form>
-      <div class="editor—wrapper">
-        <div class="toolbar-container"><!-- 工具栏 --></div>
-        <div class="editor-container"><!-- 编辑器 --></div>
-      </div>
+
       <script>
         const { createEditor, createToolbar } = window.wangEditor;
+        const content = document.getElementById("content");
 
         const editorConfig = {
-          placeholder: "请输入文章",
+          placeholder: "请输入文章内容",
           onChange(editor) {
-            const html = editor.getHtml();
-            console.log("editor content", html);
-            // 也可以同步到 <textarea>
+            content.value = editor.getHtml();
           },
         };
 
