@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAU;EACR,MAAM,EAAE,MAAM;;AAGhB,YAAa;EACX,gBAAgB,EAAE,IAAI;EACtB,MAAM,EAAE,MAAM;EACd,OAAO,EAAE,SAAS;EAClB,UAAU,EAAE,+BAA+B;EAG3C,eAAG;IACD,UAAU,EAAE,MAAM;EAGpB,kBAAM;IACJ,KAAK,EAAE,OAAO;IACd,OAAO,EAAE,IAAI;IACb,eAAe,EAAE,aAAa;IAC9B,cAAc,EAAE,GAAG",
+"sources": ["../sass/news_detail.scss"],
+"names": [],
+"file": "news_detail.css"
+}

@@ -1,0 +1,127 @@
+$news-list-item-height: 48px;
+$news-list-title-height: 48px;
+$news-list-line-height: 2px;
+$news-list-font-size: 1.2em;
+
+
+.news-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .catelog {
+      width: 280px;
+      height: 800px;
+
+      .title {
+        height: $news-list-item-height;
+        line-height: $news-list-item-height;
+        font-size: $news-list-font-size;
+        background-color: $primary-color;
+        color: #fff;
+        text-align: center;
+      }
+
+      .item {
+        height: $news-list-item-height;
+        line-height: $news-list-item-height;
+        text-align: center;
+        font-size: $news-list-font-size;
+        border-left: 2px solid #fff;
+
+        a {
+          color: #000;
+          text-decoration: none;
+        }
+
+        &:hover {
+          background-color: #e5e5e5;
+          border-left: 2px solid $primary-color;
+        }
+      }
+
+      .active {
+        background-color: #e5e5e5;
+        border-left: 2px solid $primary-color;
+      }
+    }
+
+    .wrap2 {
+      width: 820px;
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      padding: 8px 12px;
+      margin-bottom: 24px;
+
+      .title-box {
+        @include title;
+        
+        .dividing_line {
+          background-color: $gray-3;
+          height: .5px;
+        }
+      }
+
+      ul {
+        padding: 0;
+
+        li {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: 20px 0;
+
+          .news-title {
+            width: 580px;
+            font-size: 1.2em;
+            cursor: pointer;
+            a {
+              color: $gray-9;
+              text-decoration: none;
+
+              &:hover {
+                color: $primary-color;
+              }
+            }
+          }
+
+          .news-date {
+            width: 100px;
+            text-align: right;
+            color: $gray-6;
+          }
+        }
+      }
+
+      .pagination {
+        padding: 0 60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 12px;
+
+        .pagination-item {
+          display: block;
+          padding: 2px 10px;
+          height: 24px;
+          line-height: 24px;
+          font-size: 0.8em;
+          border: 1px solid $primary-color;
+          border-radius: 8px;
+          text-align: center;
+          text-decoration: none;
+          color: #000;
+
+          &:hover {
+            background-color: $primary-color;
+            color: #fff;
+          }
+        }
+
+        .active {
+          background-color: $primary-color;
+          color: #fff;
+        }
+      }
+    }
+  }

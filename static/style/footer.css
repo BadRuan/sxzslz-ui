@@ -1,0 +1,22 @@
+footer {
+  background-color: #e5e6eb;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 24px 0; }
+  footer .left-footer .text-line {
+    height: 2em; }
+    footer .left-footer .text-line span {
+      font-size: 1.1em;
+      width: 100px; }
+    footer .left-footer .text-line a {
+      color: #4e5969;
+      text-decoration: none; }
+  footer .right-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #272e3b; }
+
+/*# sourceMappingURL=footer.css.map */

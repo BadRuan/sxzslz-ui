@@ -1,0 +1,61 @@
+@import "base";
+$header-height: 60px;
+
+
+header {
+  height: $header-height;
+  background-color: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+
+  .heder-container {
+    width: $box-width;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 60px;
+
+    .logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      a {
+        font-size: 1.2em;
+        color: #000;
+
+        span {
+          display: inline-block;
+          height: $header-height;
+        }
+
+        div {
+          width: 100%;
+          height: 2px;
+        }
+
+        &:hover {
+          color: $primary-color;
+
+          div {
+            background-color: $primary-color;
+          }
+        }
+      }
+
+      .active {
+        color: $primary-color;
+
+        div {
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}

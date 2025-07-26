@@ -1,0 +1,48 @@
+.station_detail {
+  background-color: #fff;
+  margin: 24px 0;
+  padding: 24px 24px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+
+  .station_name {
+    text-align: center;
+    font-size: 1.8em;
+    color: $primary-color;
+  }
+
+  .dividing_line {
+    background-color: $gray-3;
+    height: .5px;
+  }
+
+  .station {
+    .basic {
+      @include title;
+
+      .station_con {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-around;
+        .section {
+          margin: 20px 0;
+          .sec_item {
+            margin: 16px 0;
+            font-size: 1.2em;
+
+            .s1 {
+              color: $gray-9;
+            }
+
+            .s2 {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

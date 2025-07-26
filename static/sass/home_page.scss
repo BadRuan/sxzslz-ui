@@ -1,0 +1,230 @@
+.home_page {
+    .section_1 {
+      margin-top: 20px;
+      height: 480px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .pic_mod {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        @include title;
+
+        .big_pic {
+          width: 660px;
+          height: 440px;
+          overflow: hidden;
+          a {
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    .news_list_box{
+      width: 419px;
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      
+      .title_box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @include title;
+        .more {
+          margin-right: 12px;
+          a {
+            color:#000;
+            &:hover {
+              color:$primary-color;
+            }
+          }
+        }
+      }
+
+      .dividing_line {
+          background-color: $gray-3;
+          height: .5px;
+        }
+
+      .news_list {
+        display: flex;
+        flex-direction: column;
+        .news_item {
+          margin: 12px 8px;
+          padding: 0 12px;
+          .news_title {
+            font-size: 1.1em;
+            margin-bottom: 4px;
+
+            a {
+              color: #000;
+
+              &:hover {
+                color: $primary-color;
+              }
+            }
+          }
+          .describe {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .category {
+              color:$gray-8;
+            }
+
+            .date_time{
+              color:$gray-8;
+            }
+          }
+        }
+      }
+
+    }
+
+    }
+
+    .section_2 {
+      margin-top: 20px;
+      @include title;
+
+      .station_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* 均匀分布 */
+        gap: 10px;
+        .station_item {
+          flex-basis: calc(33% - 10px); /* 每行显示4个 */
+          overflow: hidden;
+          background-color: #fff;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          border-radius: 2px;
+          width: 340px;
+          height: 120px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        
+          .text {
+            display: flex;
+            flex-direction: column;
+            gap:12px;
+            margin-left: 16px;
+            
+            .station_name {
+              text-align: left;
+              color:#000;
+              font-size: 1.2em;
+              font-weight: bold;
+            }
+
+            .station_desc {
+              color: $gray-7;
+              font-size: .8em;
+            }
+
+            .station_view {
+              a {
+                color: $primary-color;
+                font-size: 0.8em;
+              }
+            }
+          }
+
+          .pic {
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+              transition: transform 1s;
+            }
+          }
+
+          &:hover .pic img {
+            transform: scale(120%);
+          }
+        }
+      }
+    }
+
+    .section_3 {
+      margin-top: 20px;
+      @include title;
+
+      .features_list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .features_item {
+          width: 500px;
+          height: 480px;
+          overflow: hidden;
+          background-color: #fff;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          
+          .pic_box {
+            width: 500px;
+            height: 280px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              transition: transform 1s;
+            }
+          }
+
+          &:hover .pic_box img {
+            transform: scale(105%);
+          }
+
+          .text {
+            width: 420px;
+            height: 202px;
+            background-color: #fff;
+            position: relative;
+            bottom:80px;
+            left: 24px;
+            padding: 20px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+
+          .category {
+            font-size: 1.0em;
+            color:$gray-7;
+          }
+
+          .topic {
+            font-size: 1.4em;
+            text-align: left;
+            font-weight: bold;
+          }
+
+          .more {
+            a {
+              font-size: .9em;
+              color:$primary-color;
+            }
+            
+          }
+
+          .dividing_line {
+            height: 2px;
+            width: 100%;
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,19 @@
+@import "base";
+@import "mixin";
+@import "header";
+
+body {
+  background-color: $page-bg-color;
+}
+main {
+  width: $box-width;
+  margin: auto;
+  
+  @import "news_list";
+  @import "news_detail";
+  @import "station_detail";
+  @import "home_page";
+  
+}
+
+@import "footer";
