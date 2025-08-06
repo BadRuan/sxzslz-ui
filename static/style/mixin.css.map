@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAiCA,oBAQC;EAPG,IAAK;IACD,SAAS,EAAE,YAAY;EAG3B,EAAG;IACC,SAAS,EAAE,aAAa",
+"sources": ["../sass/mixin.scss"],
 "names": [],
 "file": "mixin.css"
 }

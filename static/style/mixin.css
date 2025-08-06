@@ -1,3 +1,7 @@
-
+@keyframes xuanzhuan {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(20deg); } }
 
 /*# sourceMappingURL=mixin.css.map */

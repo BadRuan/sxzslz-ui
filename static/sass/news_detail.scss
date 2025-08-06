@@ -20,31 +20,32 @@
 
   h1 {
     text-align: center;
+    color: $gray-10;
   }
 
   .desc {
-    color: #383838;
+    color: $gray-7;
+    margin: 12px auto;
     display: flex;
-    justify-content: space-around;
-    padding-bottom: 4px;
-    div {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+    justify-content: center;
+    align-items: center;
 
-      span {
-        font-size: 0.9em;
-        height: 0.9em;
-        line-height: 0.9em;
-      }
+    img {
+      margin: 0 12px;
     }
+
+    span {
+      font-size: 1em;
+      height: 1em;
+      line-height: 1em;
+    }
+
   }
 
   .dividing_line {
     background-color: $gray-3;
     height: .5px;
     margin-bottom: 30px;
-    
   }
 
 }

@@ -2,29 +2,41 @@
 
 @mixin title {
     $font-size: 1.4em;
-    
+
     .title {
-        margin: 8px 0;
+        margin: 12px 0;
         padding-left: 10px;
         display: flex;
         flex-direction: row;
-        gap:4px;
+        gap: 4px;
         align-items: center;
         height: 24px;
+
         .line {
-        width: 2px;
-        height: 24px;
-        background-color: $primary-color;
-        transform: rotate(20deg);
+            width: 2px;
+            height: 24px;
+            background-color: $primary-color;
+            transform: rotate(20deg);
+            animation: xuanzhuan 4s;
         }
 
         .text {
-        margin-left: 4px;
-        font-size: $font-size; 
-        letter-spacing: 2px;
-        line-height: $font-size;
-        height: $font-size;
+            margin-left: 4px;
+            font-size: $font-size;
+            letter-spacing: 2px;
+            line-height: $font-size;
+            height: $font-size;
+            font-weight: 500;
         }
     }
 }
 
+@keyframes xuanzhuan {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(20deg);
+    }
+}
